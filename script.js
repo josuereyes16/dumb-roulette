@@ -21,15 +21,19 @@ function addOption() {
     const optionInput = document.getElementById('optionInput');
     const option = optionInput.value.trim();
 
-    if (option && !options.includes(option)) {
-        options.push(option);
-        updateOptionList();
-        updateChart();
-        optionInput.value = '';
-    } else {
+    if (!option || options.includes(option)) {
         showAlert('Opción vacía o ya existente.');
+        optionInput.classList.add('error'); // Añadir clase de error
+        return;
     }
+
+    options.push(option);
+    updateOptionList();
+    updateChart();
+    optionInput.value = '';
+    optionInput.classList.remove('error'); // Quitar clase de error si se corrige
 }
+
 
 function updateOptionList() {
     const optionList = document.getElementById('optionList');
@@ -94,3 +98,4 @@ function spinWheel() {
         }
     }, 20);
 }
+

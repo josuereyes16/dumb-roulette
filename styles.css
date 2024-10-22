@@ -13,6 +13,11 @@
     text-align: center;
 }
 
+input.error {
+    border: 2px solid #e74c3c;
+    background-color: #f8d7da;
+}
+
 /* Adaptación del título para pantallas pequeñas */
 @media (max-width: 600px) {
     .app-title {
@@ -40,7 +45,7 @@ body {
 
 /* Formulario */
 .form-container {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.603);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -56,8 +61,10 @@ input {
 }
 
 button {
+    font-size: 15px;
+
     padding: 10px;
-    background-color: #0984e3;
+    background-color: #0091ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -141,11 +148,11 @@ canvas {
 
 .modal-content {
     position: relative; /* Importante: Esto asegura que los elementos hijos se posicionen dentro del modal */
-    background-color: #2d3436;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
     text-align: center;
     max-width: 80%;
     width: 300px;
@@ -158,7 +165,7 @@ canvas {
     right: 10px; /* Alineado dentro del recuadro */
     font-size: 1.5em;
     cursor: pointer;
-    color: #fff;
+    color: #ff0000;
     background: none;
     border: none;
     outline: none;
