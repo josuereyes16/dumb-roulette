@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Opciones</title> <!-- Título para la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title">Ruleta Aleatoria</h1> <!-- Título visible en la app -->
+        
+        <div class="form-container">
+            <input type="text" id="optionInput" placeholder="Nueva opción">
+            <button onclick="addOption()">Agregar</button>
+            <button onclick="spinWheel()">Girar Ruleta</button>
+            <p id="resultMessage"></p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+            <div id="optionList" class="horizontal-options"></div>
+        </div>
+    </div>
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeAlert()">×</span>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
